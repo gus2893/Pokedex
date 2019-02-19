@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image} from 'semantic-ui-react';
+import {Image, Container, Segment} from 'semantic-ui-react';
 
 const PokemonInfo = ({pokemon}) =>{
     if(!pokemon){
@@ -8,10 +8,10 @@ const PokemonInfo = ({pokemon}) =>{
 
 
     return (
-    <div>
+    <Segment compact padded style={{ backgroundColor:'lightgrey'}}>
         <Image src={pokemon.sprites.front_default}/>
         {pokemon.name}
-    </div>
+    </Segment>
     );  
 }
 
